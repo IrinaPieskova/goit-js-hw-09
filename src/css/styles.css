@@ -1,18 +1,117 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+/* Загальні стилі */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+/* Секція галереї */
+section {
+  padding: 20px;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Три колонки */
+  gap: 20px;
+  /* Відстань між картинками */
+  padding: 20px;
+  list-style-type: none;
+}
+
+.gallery-item {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-link {
+  display: block;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.05);
+  /* Збільшення зображення при наведенні */
+}
+
+/* Секція форми */
+.feedback-form {
+  border-radius: 8px;
+  padding: 24px;
+  width: 408px;
+  height: 296px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+
+}
+
+/* Стиль для написів та інпутів */
+.feedback-form label {
+  display: block;
+  margin-bottom: 8px;
+  text-align: left;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  /* Вирівнювання по початку форми */
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 360px;
+  height: 32px;
+  /* Для інпуту */
+  padding: 8px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.feedback-form textarea {
+  height: 79px;
+  resize: none;
+
+}
+
+/* Стиль для кнопки */
+.feedback-form button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 95px;
+  height: 40px;
+  background-color: #4e75ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: block;
+  text-align: left;
+  /* Вирівнювання кнопки по лівому краю */
+  margin-top: 16px;
+  /* Відступ зверху для кнопки */
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.feedback-form button:hover {
+  background-color: #3d5fcc;
+}
